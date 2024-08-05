@@ -1,1 +1,1 @@
-hello 
+Teaching ruby
