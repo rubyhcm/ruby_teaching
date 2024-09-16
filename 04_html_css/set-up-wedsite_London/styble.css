@@ -182,3 +182,25 @@ html{
 #content .content-section .section-subheading{
     text-align: center;
 }
+
+#content .member{
+    float: left;
+    /* cho nội hiện trên cùng 1 hàng */
+    margin: 62px 0 103px 0 ;
+    width: 33.33333%;
+    text-align: center;
+
+}
+
+#content .member .name-member{
+    font-size: 15px;
+}
+
+#content .member .member-avata{
+    width: 154px;
+    height: 154px;
+    margin-top: 15px; 
+    border-radius: 4px;
+    /* bo tròn góc ảnh */
+}
+
