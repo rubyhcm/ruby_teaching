@@ -145,6 +145,7 @@ html{
 
 #content .content-section{
     width: 800px;
+    height: 650px;
     /* thu nhỏ phạm vi nội dung */
     margin-left: auto;
     margin-right: auto;
@@ -204,3 +205,45 @@ html{
     /* bo tròn góc ảnh */
 }
 
+.tour-section{
+    background-color: #000;
+}
+
+.tour-section .section-heading,
+.tour-section .section-subheading{
+    color: #fff;
+}
+
+
+.tickest-list{
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+.tickest-list li{
+    list-style-type: none;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    color: #757575;
+}
+
+.tickest-list .sold-out{
+    margin-left: 14px;
+    background-color: red;
+    color: #fff;
+    padding: 3px 5px;
+}
+
+.tickest-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -3px;
+    /* cho vật di chuyển lên 3px sử dụng được khi có float */
+}
