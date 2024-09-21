@@ -143,14 +143,17 @@ html{
 
 }
 
+#content .team{
+    margin-bottom: 285px;
+}
+
 #content .content-section{
     width: 800px;
-    height: 650px;
     /* thu nhỏ phạm vi nội dung */
     margin-left: auto;
     margin-right: auto;
     /* đưa nội dung ra giữa */
-    padding: 64px 0;
+    padding-top: 64px ;
 }
 
 #content .content-section .section-heading{
@@ -207,6 +210,7 @@ html{
 
 .tour-section{
     background-color: #000;
+    height: auto;
 }
 
 .tour-section .section-heading,
@@ -246,4 +250,66 @@ html{
     text-align: center;
     margin-top: -3px;
     /* cho vật di chuyển lên 3px sử dụng được khi có float */
+}
+
+.places-list{
+    margin-top: 32px;
+    padding-bottom: 470px;
+    width: 800px;
+    height: 445px;
+    height: 395px;
+    /* margin: 0 360px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.place-item{
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+    /* khoản của 2 hình ảnh */
+  
+}
+
+.places-img{
+    width: 100%;
+    /* cho ảnh có chiều bằng dài với thẻ cha */
+    height: 184px;
+}
+
+.place-content{
+    padding: 16px;
+    background-color: #fff;
+    width: 100%;
+    /* cho backgrou cho chiều dài bằng thẻ cha */
+}
+
+.place-content .places-heading{
+}
+
+.place-content .places-time{
+    margin: 15px 0;
+    opacity: 0.5;
+    /* làm cho chữ mờ */
+}
+
+.place-content .places-describe{
+    margin-bottom: 25px ;
+}
+
+.place-content .places-buy-tickest{
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.place-content .places-img:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.places-img:hover{
+    filter: brightness(65%);
+    /* làm ảnh tối đi */
 }
