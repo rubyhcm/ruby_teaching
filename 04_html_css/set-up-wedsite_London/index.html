@@ -75,7 +75,7 @@
                     <ul class="tickest-list">
                         <li>September <span class="sold-out">Sold out</span></li>
                         <li>October <span class="sold-out">Sold out</span></li>
-                        <li>November <span class="quantity">3</span></li>
+                        <li>November <span class="tickets-quantity">3</span></li>
                     </ul>
                 </div>
                 <!-- places -->
@@ -87,7 +87,7 @@
                             <h3 class="places-heading">New York</h3>
                             <p class="places-time">Fri 27 Nov 2016</p>
                             <p class="places-describe">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="" class="places-buy-tickest">Buy Tickets</a>
+                            <button href="" class="places-buy-tickest js-buy-tickest" >Buy Tickets</button>
                         </div>
                     </div>
                     <!-- place two -->
@@ -97,7 +97,7 @@
                             <h3 class="places-heading">Paris</h3>
                             <p class="places-time">Sat 28 Nov 2016</p>
                             <p class="places-describe">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="" class="places-buy-tickest">Buy Tickets</a>
+                            <button href="" class="places-buy-tickest js-buy-tickest"  >Buy Tickets</button>
                         </div>
                     </div>
                     <!-- place three -->
@@ -107,7 +107,7 @@
                             <h3 class="places-heading">San Francisco</h3>
                             <p class="places-time">Sun 29 Nov 2016</p>
                             <p class="places-describe">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="" class="places-buy-tickest">Buy Tickets</a>
+                            <button href="" class="places-buy-tickest js-buy-tickest"  >Buy Tickets</button>
                         </div>
                     </div>
                  </div>
@@ -116,12 +116,71 @@
             <div class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-subheading">Fan? Drop a note!</p>
-            </div> -->
-        </div>
+            </div>
+            </div>
 
         <div id="footer">
             
         </div>
     </div>
+    <div class="modal js-modal" >
+        <div class="modal-container ">
+            <button class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </button>
+            <header class="modal-header">
+                <i class="modal-heading-icon ti-bag"></i>
+                Tickets
+            </header>
+            <div class="modal-body">
+                <!-- Shopping -->
+                <label for="tickets-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input type="text" id="tickets-quantity" class="modal-input" placeholder="How many?">
+                <!-- Sen to -->
+                <label for="tickets-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Sen to
+                </label>
+                <input type="text" id="tickets-email" class="modal-input" placeholder="Enter tickets-email..."><br>
+                <button id="buy-tiskecs" type="submit">
+                    PAY
+                    <i class="ti-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">
+                    Neep 
+                    <a href="">help?</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const byBtns = document.querySelectorAll('.js-buy-tickest')
+        // lấy ra tất cả nút có cùng class
+        const modal = document.querySelector('.js-modal')
+        // lấy ra 1 nút
+        const modalClose = document.querySelector('.js-modal-close')
+
+        function showBuyTickets() {
+            modal.classList.add('open')
+            // dùng để hiển thị thẻ modal
+        }
+
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+            // dùng để tắt thẻ modal
+        }
+
+        for (const buyBtn of byBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        modalClose.addEventListener('click', hideBuyTickets)
+    </script> 
 </body>
 </html>

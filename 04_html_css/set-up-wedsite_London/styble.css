@@ -304,6 +304,12 @@ html{
     padding: 8px 16px;
 }
 
+.place-content .places-buy-tickest:hover{
+    background-color: #ccc;
+    color: #000;
+    border: 2px solid #ccc;
+}
+
 .place-content .places-img:hover{
     background-color: #ccc;
     color: #000;
@@ -312,4 +318,104 @@ html{
 .places-img:hover{
     filter: brightness(65%);
     /* làm ảnh tối đi */
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    /* canh giữa theo chiều cao  */
+    justify-content: center;
+    /* canh giữa theo chiều ngang  */
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 900px ;
+    max-width: calc(100% - 50px);
+    /* khi ảnh thu nhỏ lại thì nó sẻ cách hai bên viền , mõi bên 25px */
+    min-height: 200px;
+    position: relative;
+}
+
+.modal-container .modal-header{
+    background-color: #009688;
+    height: 129px;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    /* khoản cách giữa các chữ trong câu */
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 9px 12px;
+}
+
+.modal-close:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+    /* khi để con trỏ chuột vào sẻ chuyển sang hình bàn tay */
+}
+
+.modal-body{
+    padding: 0 16px;
+    
+}
+
+.modal-label{
+    display: block;
+    /* cho phần label vào input mỗi thẻ 1 hàng */
+    padding: 12px 0;
+    font-size: 15px;
+}
+
+.modal-input{
+    width: 100%;
+    padding: 10px 8px;
+    border: 2px solid #ccc;
+    margin-bottom: 17px;
+}
+
+#buy-tiskecs{
+    border: none;
+    width: 100%;
+    padding: 16px 0;
+    background-color: #009688;
+    color: #fff;
+    text-transform: uppercase;
+    /* chỉnh font chữ in hoa */
+    font-weight: bold;
+    /* chỉnh font in đậm */
+    margin-bottom: 31px;
+}
+
+#buy-tiskecs:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-footer{
+    padding: 0 16px 30px 16px;
+    text-align: right;
+    
+}
+
+.modal-footer a{
+    color: #2196F3;
+}
+
+.modal{
+    display: flex;
 }
