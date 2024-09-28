@@ -341,6 +341,9 @@ html{
     /* khi ảnh thu nhỏ lại thì nó sẻ cách hai bên viền , mõi bên 25px */
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 0.5s;   /* ease là cách di chuyển , 0.5s tốc độ di chuyển */
+    /* dùng để chạy hiệu ứng di chuyển đẫ được css ở dưới */
+  
 }
 
 .modal-container .modal-header{
@@ -360,10 +363,13 @@ html{
     top: 0;
     color: #fff;
     padding: 9px 12px;
+    background-color: #009688;
+    border: 2px solid #009688;
 }
 
 .modal-close:hover{
     background-color: #ccc;
+    border: 2px solid #ccc;
     color: #000;
     cursor: pointer;
     /* khi để con trỏ chuột vào sẻ chuyển sang hình bàn tay */
@@ -416,6 +422,21 @@ html{
     color: #2196F3;
 }
 
-.modal{
+.open{
     display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        /* lúc đầu nội dung trong suôt */
+        transform: translateY(-100px);
+        /* điểm bắt đầu từ vị trí -100px tỉnh từ trên xuống */
+    }
+    to {
+        opacity: 1;
+        /* lúc sau nội dung hiện rõ như ban đầu */
+        transform: translateY(0);
+        /* điểm kết thúc tại vị trí ban đầu  */
+    }
 }

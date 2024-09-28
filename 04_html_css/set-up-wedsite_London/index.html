@@ -124,7 +124,7 @@
         </div>
     </div>
     <div class="modal js-modal" >
-        <div class="modal-container ">
+        <div class="modal-container js-modal-Container">
             <button class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </button>
@@ -165,6 +165,7 @@
         const modal = document.querySelector('.js-modal')
         // lấy ra 1 nút
         const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-Container')
 
         function showBuyTickets() {
             modal.classList.add('open')
@@ -181,6 +182,13 @@
         }
 
         modalClose.addEventListener('click', hideBuyTickets)
+
+        modal.addEventListener('click', hideBuyTickets)
+        // khi click vào khoản trống bên ngoài của modal thì sẻ đống thẻ Tickets
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+        // ngưng việc click vào các thẻ con của modal để tắt Tickets
     </script> 
 </body>
 </html>
