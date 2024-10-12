@@ -521,3 +521,7 @@ html{
     color: rgba(0, 0, 0 , 0.4);
     text-align: center;
 }
+
+#footer .link-footer a{
+    color: rgba(0, 0, 0 , 0.4);
+}
