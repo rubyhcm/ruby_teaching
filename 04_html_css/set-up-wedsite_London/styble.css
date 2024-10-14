@@ -525,3 +525,27 @@ html{
 #footer .link-footer a{
     color: rgba(0, 0, 0 , 0.4);
 }
+
+@media (max-width:768px) {
+    .width{
+        width: 799px;
+    }
+    .location{
+        text-align: center;
+    }
+    .about-text{
+        margin: 25px 16px 0;
+    }
+    .tickest-list{
+        margin: 30px 8px 0;
+    }
+    .path-footer{
+        width: 100%;
+    }
+    .label-contact{
+        margin-left: 8px;
+    }
+    .path-footer{
+        margin: 64px 16px
+    }
+}
