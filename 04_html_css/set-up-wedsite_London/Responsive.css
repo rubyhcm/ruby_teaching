@@ -1,0 +1,39 @@
+@media(max-width:768px) {
+    .places-list{width: auto;}
+
+    #footer{width: 100%;}
+
+    .imag-footer{
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .tour-section .tickest-list{margin: 30px 8px 0 8px;}
+
+    .content-section .label-contact{width: 360px;}
+
+    .contact-button .footer-contact{right: 13px;}
+
+    .content-section .about-text{margin: 25px 16px 0 16px;}
+
+    .path-footer{
+        margin: 100px;
+        text-align: center;
+    }
+
+    .color{color: rgba(0, 0, 0 , 0.3);}
+
+    .path-footer .icon-footer{font-size: 24px;}
+
+    .path-footer .link-footer{ margin: 15px 0;}
+}
+
+@media(max-width:500px) {
+    #nav{
+        display: block;
+    }
+
+    .content-contact{
+        display: block;
+    }
+}

@@ -71,6 +71,10 @@ html{
     /* điều chinh độ lớn backgrou của icon là 62 và cho icon trong giữa 62 */
 }
 
+#hesder .menu-mobile{
+    display: none;
+}
+
 #header .search-icon{
     color: #fff;
     font-size: 20px;
@@ -152,6 +156,7 @@ html{
 #content .content-section{
     width: 800px;
     /* thu nhỏ phạm vi nội dung */
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     /* đưa nội dung ra giữa */
@@ -526,26 +531,4 @@ html{
     color: rgba(0, 0, 0 , 0.4);
 }
 
-@media (max-width:768px) {
-    .width{
-        width: 799px;
-    }
-    .location{
-        text-align: center;
-    }
-    .about-text{
-        margin: 25px 16px 0;
-    }
-    .tickest-list{
-        margin: 30px 8px 0;
-    }
-    .path-footer{
-        width: 100%;
-    }
-    .label-contact{
-        margin-left: 8px;
-    }
-    .path-footer{
-        margin: 64px 16px
-    }
-}
+
