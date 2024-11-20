@@ -34,7 +34,7 @@
                 <i class="search-icon ti-search"></i>
                 <!-- chèn phần icon search vào  -->
             </div>
-            <div class="menu-mobile">
+            <div class="menu-mobile" id="menu-mobile-btn">
                <i class="ti-menu"></i>
             </div>
         </div>
@@ -131,9 +131,9 @@
                     
                     </div>
                     <form class="input-contact">
-                         <input type="text" placeholder="Name" class="input-name" required>
-                         <input type="email" class="input-email" placeholder="Email" required><br>
-                         <input type="text" class="input-message" placeholder="Message" required>
+                         <input type="text" placeholder="Name" class="input-name width-mobile" required>
+                         <input type="email" class="input-email width-mobile" placeholder="Email" required><br>
+                         <input type="text" class="input-message width-mobile" placeholder="Message" required>
                    
                
                 <div class="contact-button">
@@ -226,5 +226,27 @@
         })
         // ngưng việc click vào các thẻ con của modal để tắt Tickets
     </script> 
+
+    <script>
+        var header = document.getElementById('header');
+        // lấy nút header
+        var mobileMenu = document.getElementById('menu-mobile-btn');
+        // lấy nút menu 
+        // console.log(mobileMenu); cách kiểm tra có ăn lệnh chưa
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === 50
+            // === nghĩa là so sánh
+            // 50 là chiều cao header
+            if (isClosed) {
+                header.style.height = 'auto';
+            }
+            // nếu điều kiện header.clientHeight === 50 là đúng thì sẻ chạy lệnh if (mở)
+            else {
+                header.style.height = '50px'
+            }
+            // nếu điều kiện header.clientHeight === 50 là sai thì sẻ chạy lệnh else (mở)
+        } 
+       
+    </script>
 </body>
 </html>

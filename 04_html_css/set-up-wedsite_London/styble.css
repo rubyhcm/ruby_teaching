@@ -19,8 +19,10 @@ html{
     left: 0;
     right: 0;
     z-index: 10;
+    overflow: hidden;
     /* làm cho phần header nằm trên các phần khác */
 }
+
 
 #nav, .subnav{
     list-style-type: none;

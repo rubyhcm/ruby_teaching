@@ -29,11 +29,86 @@
 }
 
 @media(max-width:500px) {
-    #nav{
+    #nav > li{
         display: block;
     }
 
     .content-contact{
         display: block;
+    }
+
+    #header{
+        overflow: hidden;
+    }
+
+    .search-btn{display: none;}
+
+    #header .menu-mobile{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        padding: 17px;
+    }
+
+    #header .menu-mobile:hover{
+        background-color: #ccc;
+        color: black;
+    }
+
+    #content .member{
+        float: unset;
+        width: auto;
+        margin: 55px 0;
+    }
+
+    #content .member .member-avata{
+        width: auto;
+        height: auto;
+    }
+
+    #content .team{
+        margin-bottom: 80px;
+    }
+
+    .place-item{
+        float: unset;
+        width: auto;
+        padding: 24px;
+    }
+
+    .place-item .places-img{
+        height: auto;
+    }
+
+    .places-list{
+        background-color: black;
+        height: auto;
+        padding-bottom: 64px;
+    }
+
+    .content-section .input-name{
+        display: block;
+    }
+
+    .content-section .footer-contact{
+        bottom: -140px;
+    }
+
+    .content-section .input-contact{
+        margin: 7px 14px 0px 9px;
+    }
+
+    .content-section .width-mobile{
+        width: 100%;
+    }
+
+    #footer .imag-foote{
+        margin-top: 154px;
+    }
+
+    .modal-container{
+        bottom: 6%;
     }
 }
