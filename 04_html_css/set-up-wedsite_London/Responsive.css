@@ -1,6 +1,10 @@
 @media(max-width:768px) {
     .places-list{width: auto;}
 
+    .place-content .places-buy-tickest{
+        height: 50px;
+    }
+
     #footer{width: 100%;}
 
     .imag-footer{
@@ -10,9 +14,16 @@
 
     .tour-section .tickest-list{margin: 30px 8px 0 8px;}
 
-    .content-section .label-contact{width: 360px;}
+    .input-contact{margin-right: 7px;}
 
-    .contact-button .footer-contact{right: 13px;}
+    .input-contact .input-name,
+    .input-contact .input-email,
+    .input-contact .input-message{
+        padding: 15px;
+        
+    }
+
+    .contact-button .footer-contact{right: 7px;}
 
     .content-section .about-text{margin: 25px 16px 0 16px;}
 
@@ -28,13 +39,67 @@
     .path-footer .link-footer{ margin: 15px 0;}
 }
 
-@media(max-width:500px) {
+@media(max-width:600px) {
     #nav > li{
+        display: block;
+    }
+
+    #nav > li:first-child{
+        /* lấy ra thẻ con trực tiếp đầu tiên của nav */
+        display: inline-block;
+    }
+
+    #nav .subnav{
+        position: initial;
+        background-color: black;
+    }
+
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
+
+    #header #nav{
         display: block;
     }
 
     .content-contact{
         display: block;
+        margin: 32px 0;
+    }
+
+    .content-contact .label-contact{
+        margin: 7px;
+    }
+
+    .input-contact .input-name,
+    .input-contact .input-email,
+    .input-contact .input-message,
+    .contact-button .footer-contact{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contact-button .footer-contact{
+        position: initial;
+    }
+
+    .content-contact .input-contact{
+        width: 100%;
+        margin: 0;
+    }
+
+    .content-section .input-name{
+        display: block;
+    }
+
+    .content-section .footer-contact{
+        bottom: -140px;
+    }
+
+
+    #footer .imag-foote{
+        margin-top: 154px;
     }
 
     #header{
@@ -60,7 +125,7 @@
     #content .member{
         float: unset;
         width: auto;
-        margin: 55px 0;
+        margin: 30px 0;
     }
 
     #content .member .member-avata{
@@ -88,27 +153,9 @@
         padding-bottom: 64px;
     }
 
-    .content-section .input-name{
-        display: block;
-    }
-
-    .content-section .footer-contact{
-        bottom: -140px;
-    }
-
-    .content-section .input-contact{
-        margin: 7px 14px 0px 9px;
-    }
-
-    .content-section .width-mobile{
-        width: 100%;
-    }
-
-    #footer .imag-foote{
-        margin-top: 154px;
-    }
-
     .modal-container{
         bottom: 6%;
     }
+
+    
 }

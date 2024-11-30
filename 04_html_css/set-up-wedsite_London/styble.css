@@ -19,7 +19,7 @@ html{
     left: 0;
     right: 0;
     z-index: 10;
-    overflow: hidden;
+    
     /* làm cho phần header nằm trên các phần khác */
 }
 
@@ -203,18 +203,18 @@ html{
     height: 136px;
 }
 
+.content-contact .input-contact{
+    width: 50%;
+}
+
 .content-contact .label-contact{
+    width: 50%;
     font-size: 18px;
     line-height: 27px;
 }
 
-.content-contact .label-contact{
-    width: 384px;
-}
-
 .content-contact .input-email,
 .content-contact .input-name{
-    width: 184px;
     height: 40px;
     padding: 8px;
     box-sizing: border-box;
@@ -222,11 +222,15 @@ html{
 }
 
 .content-contact .input-name{
-    margin-right: 16px;
+    width: 50%;
+}
+
+.content-contact .input-email{
+    width: 48.5%;
 }
 
 .content-contact .input-message{
-    width: 388px;
+    width: 100%;
     height: 40px;
     padding: 8px;
     box-sizing: border-box;
@@ -236,7 +240,7 @@ html{
     position: absolute;
     display: flex;
     bottom: 0;
-    right: 20px;
+    right: 0;
     border: none;
     background-color: #000;
     width: 72px;
