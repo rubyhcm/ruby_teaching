@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .PC,.mobile,.tablet{
+        font-size: 84px;
+        color: aqua;
+    }
+    
+   @media (max-width:800px) {
+    .PC,.mobile,.tablet{
+        color: red;
+    }
+   }
+   /* khi chiều rộng của wed < 800px lệnh trong media sẻ chạy */
+
+</style>
+<body>
+    <h2 class="PC">PC</h2>
+    <h2 class="mobile">MOBILE</h2>
+    <h2 class="tablet">TABLET</h2>
+</body>
+</html>

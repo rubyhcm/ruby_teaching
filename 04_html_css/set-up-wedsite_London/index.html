@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styble.css">
+    <link rel="stylesheet" href="./Responsive.css">
     <link rel="stylesheet" href="./img/themify-icons-font/themify-icons/themify-icons.css">
     <!-- dùng để chèn icon vào wed -->
 </head>
@@ -12,8 +13,8 @@
     <div id="main">
         <div id="header">
             <ul id="nav">
-                <li><a href="">HOME</a></li>
-                <li><a href="#section-heading-band">Band</a></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#content-section">Band</a></li>
                 <li><a href="#content-section-tour">Tour</a></li>
                 <li><a href="#section-heading-contact">Contact</a></li>
                 <li >
@@ -23,9 +24,9 @@
                         <!-- chèn faanf icon down vào sau more -->
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -33,9 +34,12 @@
                 <i class="search-icon ti-search"></i>
                 <!-- chèn phần icon search vào  -->
             </div>
+            <div class="menu-mobile" id="menu-mobile-btn">
+               <i class="ti-menu"></i>
+            </div>
         </div>
 
-        <div id="slider">
+        <div id="slider" class="width">
             <div class="text-content">
                 <h2 class="text-heading"> City of London</h2>
                 <div class="text-description">This is the most famous city in London</div>
@@ -44,7 +48,7 @@
 
         <div id="content">
 <!-- BAND -->
-            <div class="content-section">
+            <div class="content-section" id="content-section">
                 <h2 class="section-heading" id="section-heading-band">THE BAND</h2>
                 <p class="section-subheading">We love music</p>
                 <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -113,7 +117,7 @@
                  </div>
             </div>
 <!-- CONTACT -->
-            <div class="content-section">
+            <div class="content-section" id="section-heading-contact">
                 <h2 class="section-heading" id="section-heading-contact">CONTACT</h2>
                 <p class="section-subheading">Fan? Drop a note!</p>
                 <div class="content-contact">
@@ -126,30 +130,31 @@
                         <label for="" class="category-contact"> Email: mail@mail.com</label><br>
                     
                     </div>
-                    <form class="input-contact">
+                    <form class="input-contact contact-button">
                          <input type="text" placeholder="Name" class="input-name" required>
                          <input type="email" class="input-email" placeholder="Email" required><br>
                          <input type="text" class="input-message" placeholder="Message" required>
+                         <button type="submit" class="footer-contact"; >SEND</button>
                    
                
-                <div class="contact-button">
-                   <button type="submit" class="footer-contact"; >SEND</button>
-               </div>  </form></div>
+                  </form></div>
             </div>
             </div>
 
         <div id="footer">
             <img src="https://www.w3schools.com/w3images/map.jpg" alt="" class="imag-footer">
-            <div class="icon-footer">
-                <i class="ti-facebook footer-hover"></i>
-                <i class="ti-instagram footer-hover"></i>
-                <i class="ti-github footer-hover"></i>
-                <i class="ti-pinterest footer-hover"></i>
-                <i class="ti-twitter-alt footer-hover"></i>
-                <i class="ti-linkedin footer-hover"></i>
-            </div>
-            <div class="link-footer">
-                <p>Powered by <a href="https://w3schools.com/w3css/tryw3css_templates_band.htm?gidzl=fEULCT07Ar2b-98oqX4jLA_qd3R4Gt46v_FEP9eNT0YzfPe-cnSgMRsan6x042fTu_B1E395qOXLqmKlLW">w3.css</a</p>
+            <div class="path-footer">
+                <div class="icon-footer color">
+                    <i class="ti-facebook footer-hover"></i>
+                    <i class="ti-instagram footer-hover"></i>
+                    <i class="ti-github footer-hover"></i>
+                    <i class="ti-pinterest footer-hover"></i>
+                    <i class="ti-twitter-alt footer-hover"></i>
+                    <i class="ti-linkedin footer-hover"></i>
+                </div>
+                <div class="link-footer color">
+                    <p>Powered by <a href="https://w3schools.com/w3css/tryw3css_templates_band.htm?gidzl=fEULCT07Ar2b-98oqX4jLA_qd3R4Gt46v_FEP9eNT0YzfPe-cnSgMRsan6x042fTu_B1E395qOXLqmKlLW">w3.css</a</p>
+                </div>
             </div>
         </div>
     </div>
@@ -220,5 +225,51 @@
         })
         // ngưng việc click vào các thẻ con của modal để tắt Tickets
     </script> 
+
+    <script>
+        // đóng mở menu
+        var header = document.getElementById('header');
+        // lấy nút header
+        var mobileMenu = document.getElementById('menu-mobile-btn');
+        // lấy nút menu 
+        // console.log(mobileMenu); cách kiểm tra có ăn lệnh chưa
+        var headerHeight = header.clientHeight
+        // lấy giá trị height của header 
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight
+            // === nghĩa là so sánh
+            // 50 là chiều cao header
+            if (isClosed) {
+                header.style.height = 'auto';
+            }
+            // nếu điều kiện header.clientHeight === 50 là đúng thì sẻ chạy lệnh if (mở)
+            else {
+                header.style.height = null
+            }
+            // nếu điều kiện header.clientHeight === 50 là sai thì sẻ chạy lệnh else (mở)
+        } 
+        // ấn vần các phần trong header sẻ đống
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        // lấy ra những thẻ a có href là #...
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            // tách từng thẻ trong menuItems ra
+           
+            menuItem.onclick = function() {
+                var isParentmenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+            // && là và
+            // tìm ra thẻ "khi bấm vào(this)"có thẻ anh chị và thẻ anh chị đó là subnav
+                if (isParentmenu) {
+                    // nếu phải thẻ của isParentmenu thì sẻ bỏ qua tính năng mặt định "reset lại trang"
+               
+                }
+                else {
+                    header.style.height = null
+                    // nếu không phải thẻ của isParentmenu thì sẻ ẩn menu
+                }
+            }
+        }
+       
+    </script>
 </body>
 </html>

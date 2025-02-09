@@ -19,8 +19,10 @@ html{
     left: 0;
     right: 0;
     z-index: 10;
+    
     /* làm cho phần header nằm trên các phần khác */
 }
+
 
 #nav, .subnav{
     list-style-type: none;
@@ -69,6 +71,10 @@ html{
     /* điều chỉnh vị trí của icon lên cùng 1 hàng và ở bên phải*/
     padding: 0 21px;
     /* điều chinh độ lớn backgrou của icon là 62 và cho icon trong giữa 62 */
+}
+
+#hesder .menu-mobile{
+    display: none;
 }
 
 #header .search-icon{
@@ -152,6 +158,7 @@ html{
 #content .content-section{
     width: 800px;
     /* thu nhỏ phạm vi nội dung */
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     /* đưa nội dung ra giữa */
@@ -196,18 +203,18 @@ html{
     height: 136px;
 }
 
+.content-contact .input-contact{
+    width: 50%;
+}
+
 .content-contact .label-contact{
+    width: 50%;
     font-size: 18px;
     line-height: 27px;
 }
 
-.content-contact .label-contact{
-    width: 384px;
-}
-
 .content-contact .input-email,
 .content-contact .input-name{
-    width: 184px;
     height: 40px;
     padding: 8px;
     box-sizing: border-box;
@@ -215,11 +222,15 @@ html{
 }
 
 .content-contact .input-name{
-    margin-right: 16px;
+    width: 50%;
+}
+
+.content-contact .input-email{
+    width: 48.5%;
 }
 
 .content-contact .input-message{
-    width: 388px;
+    width: 100%;
     height: 40px;
     padding: 8px;
     box-sizing: border-box;
@@ -229,7 +240,7 @@ html{
     position: absolute;
     display: flex;
     bottom: 0;
-    right: 20px;
+    right: 0;
     border: none;
     background-color: #000;
     width: 72px;
@@ -501,8 +512,8 @@ html{
     margin:64px 0 79px 0
 }
 #footer .imag-footer{
-    width: 100%;
-    height: 715px;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 64px;
 }
 
@@ -525,3 +536,5 @@ html{
 #footer .link-footer a{
     color: rgba(0, 0, 0 , 0.4);
 }
+
+

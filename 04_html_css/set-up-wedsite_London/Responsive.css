@@ -1,0 +1,161 @@
+@media(max-width:768px) {
+    .places-list{width: auto;}
+
+    .place-content .places-buy-tickest{
+        height: 50px;
+    }
+
+    #footer{width: 100%;}
+
+    .imag-footer{
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .tour-section .tickest-list{margin: 30px 8px 0 8px;}
+
+    .input-contact{margin-right: 7px;}
+
+    .input-contact .input-name,
+    .input-contact .input-email,
+    .input-contact .input-message{
+        padding: 15px;
+        
+    }
+
+    .contact-button .footer-contact{right: 7px;}
+
+    .content-section .about-text{margin: 25px 16px 0 16px;}
+
+    .path-footer{
+        margin: 100px;
+        text-align: center;
+    }
+
+    .color{color: rgba(0, 0, 0 , 0.3);}
+
+    .path-footer .icon-footer{font-size: 24px;}
+
+    .path-footer .link-footer{ margin: 15px 0;}
+}
+
+@media(max-width:600px) {
+    #nav > li{
+        display: block;
+    }
+
+    #nav > li:first-child{
+        /* lấy ra thẻ con trực tiếp đầu tiên của nav */
+        display: inline-block;
+    }
+
+    #nav .subnav{
+        position: initial;
+        background-color: black;
+    }
+
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
+
+    #header #nav{
+        display: block;
+    }
+
+    .content-contact{
+        display: block;
+        margin: 32px 0;
+    }
+
+    .content-contact .label-contact{
+        margin: 7px;
+    }
+
+    .input-contact .input-name,
+    .input-contact .input-email,
+    .input-contact .input-message,
+    .contact-button .footer-contact{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contact-button .footer-contact{
+        position: initial;
+    }
+
+    .content-contact .input-contact{
+        width: 100%;
+        margin: 0;
+    }
+
+    .content-section .input-name{
+        display: block;
+    }
+
+    .content-section .footer-contact{
+        bottom: -140px;
+    }
+
+
+    #footer .imag-foote{
+        margin-top: 154px;
+    }
+
+    #header{
+        overflow: hidden;
+    }
+
+    .search-btn{display: none;}
+
+    #header .menu-mobile{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        padding: 17px;
+    }
+
+    #header .menu-mobile:hover{
+        background-color: #ccc;
+        color: black;
+    }
+
+    #content .member{
+        float: unset;
+        width: auto;
+        margin: 30px 0;
+    }
+
+    #content .member .member-avata{
+        width: auto;
+        height: auto;
+    }
+
+    #content .team{
+        margin-bottom: 80px;
+    }
+
+    .place-item{
+        float: unset;
+        width: auto;
+        padding: 24px;
+    }
+
+    .place-item .places-img{
+        height: auto;
+    }
+
+    .places-list{
+        background-color: black;
+        height: auto;
+        padding-bottom: 64px;
+    }
+
+    .modal-container{
+        bottom: 6%;
+    }
+
+    
+}
