@@ -1,0 +1,292 @@
+.header{
+    background-image: linear-gradient(#f53e2d, #fe6433);
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0 5%; */
+}
+
+.header__nav-list{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.header__nav-list .header__nav-item{
+    padding: 0 8px;
+    position: relative;
+}
+
+.header__nav-item--has-QR:hover .header__QR{
+    display: block;
+}
+
+.header__nav-item .header__nav-icon:hover,
+.header__nav-list .header__nav-item-link:hover,
+.header__nav-list .header__nav-item:hover{
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.header__nav-list .header__nav-item-link{
+    text-decoration: none;
+}
+
+.header__nav-list .header__nav-item,
+.header__nav-list .header__nav-item-link{
+    font-size: 1.5rem;
+    color: var(--white-color);
+    font-weight: 100;
+}
+
+.header__nav-item--bold {
+    font-weight: 350 !important;
+}
+
+.header__nav-separation{
+    height: 16px;
+    border: 1px solid #FB9086;
+}
+
+.header__nav-icons-link{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.header__nav-item--not-pointer,
+.header__nav-icons-link .fa-facebook:hover,
+.header__nav-icons-link .fa-instagram:hover{
+    color: var(--white-color);
+    cursor: text;
+}
+
+.header__nav-icon{
+    margin: 0 4px;
+}
+/* Header QR Code */
+.header__QR{
+    width: 170px;
+    background-color: var(--white-color);
+    position: absolute;
+    top: 130%;
+    left: 8px;
+    padding: 8px;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.header__QR::before{
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+
+.header__QR-img{
+    width: 100%;
+}
+
+.header__QR-apps{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom:10px;
+}
+
+.header__QR-dowload{
+    width: auto;
+    height: 15px;
+}
+/* Header notify */
+.header__notify{
+    width: 404px;
+    background-color: var(--white-color);
+    position: absolute;
+    right: 8px;
+    top: 155%;
+    border: 1px solid #D3D3D3;
+    box-shadow: 1px 21px 32px rgba(3, 3, 3, 0.3);
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    /* dịch chuyển tấm bắt đầu animation từ trái sang 100% - 20px ở trên */
+    animation: headerNotifyGrowth 0.25s ease-in;
+    display: none;
+}
+
+@keyframes headerNotifyGrowth{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.header__notify::before{
+    content: "";
+    display: block;
+    position: absolute;
+    border-width: 20px 28px;
+    border-style:  solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -30px;
+    right: 11px;
+}
+
+.header__notify-header{
+    height: 40px;
+}
+
+.header__notify-header h3{
+    color: #888;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 0 12px;
+    line-height: 40px;
+    user-select: none;
+}
+
+.header__notify-list{
+    padding: 0;
+}
+
+.header__notify-item{
+    padding: 6px 0 18px;
+    background-color: rgba(238, 77, 45, 0.1);
+}
+
+.header__notify-footer-btn:hover,
+.header__notify-item:hover{
+    background-color: #f6f6f6;
+}
+
+.header__notify-link{
+    display: flex;
+    padding: 0 12px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.header__notify-img{
+    height: 42px;
+    width: auto;
+}
+
+.header__notify-body{
+    padding: 0 4px;
+}
+
+
+.header__notify-name,
+.header__notify-describle{
+    font-weight: 400;
+}
+
+.header__notify-name{
+    margin: 0 0 6px 0;
+    font-size: 1.4rem;
+    color: var(--black-color);
+}
+
+.header__notify-describle{
+    margin: 0;
+    font-size: 1.1rem;
+    color: #756F6E;
+}
+
+.header__notify-footer{
+    display: flex;
+    text-align: center
+}
+
+.header__notify-footer-btn{
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.header__nav-item--has-notify:hover .header__notify{
+    display: block;
+}
+/* Header search */
+.header__search{
+    display: flex;
+    align-items: flex-end;
+    padding: 16px 0 30px;
+}
+
+.header__search-logo{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.header__search-logo--icon{
+    font-size: 5rem;
+    margin: 0 12px;
+}
+
+.header__search-logo--title{
+    margin: 0;
+    font-size: 4.5rem;
+    line-height: 40px;
+}
+
+.header__search-bar{
+    background-color: var(--white-color);
+    margin: 0 48px;
+    height: 45px;
+    width: 62.5%;
+    padding: 3px;
+}
+
+.header__search-bar-form,
+.header__search-bar-form--button,
+.header__search-bar-form--input{
+    height: 100%;
+}
+
+.header__search-bar-form{
+    display: flex;
+}
+
+.header__search-bar-form--button,
+.header__search-bar-form--input{
+    font-size: 1.6rem;
+}
+
+.header__search-bar-form--input{
+    flex: 1;
+    padding: 0 10px;
+    border: none;
+}
+
+.header__search-bar-form--button{
+    width: 60px;
+    border: none;
+    background-color: #fb5533;
+    cursor: pointer;
+}
+
+.header__search-icon{
+    font-size: 2.3rem;
+    padding-right: 24px;
+}
+
+.header__search-logo--icon,
+.header__search-logo--title,
+.header__search-bar-form--button,
+.header__search-icon{
+    color: var(--white-color);
+}
