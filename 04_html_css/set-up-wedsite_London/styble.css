@@ -1,0 +1,527 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+
+}
+
+#header{
+    height: 50px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    /* làm cho phần header nằm trên các phần khác */
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav > li {
+    display:inline-block;
+    /*  display: inline-block; cho các thẻ li lên cùng 1 hàng ngang */
+}
+
+#nav li{
+     position: relative; 
+    /* cho position: relative; là thẻ cha */
+}
+#nav .subnav {
+    background-color:#fff ; 
+    min-width: 160px;
+    display: none; 
+    /* ẩn các tad trong subnav */
+     position: absolute ;
+     top: 100%;
+     left: 0;
+    /* để position: absolute; xác định vị trí theo thẻ cha */
+    box-shadow: 0 0 10px rgba(0, 0, 0 , 0.3);
+    /*  box-shadow: 0 0 10px rgba(0, 0, 0 , 0.3); làm bóng đổ */
+}
+
+#nav .subnav a{
+    color: #000;
+    padding: 0 15px;
+    line-height: 40px;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+    /* dùng để chỉnh kích thước icon  */
+}
+
+#nav{
+    display: inline-block;
+    /* điều chỉnh phạm vi hoạt động của nội dung trong thẻ  */
+}
+
+#header .search-btn{
+    float: right;
+    /* điều chỉnh vị trí của icon lên cùng 1 hàng và ở bên phải*/
+    padding: 0 21px;
+    /* điều chinh độ lớn backgrou của icon là 62 và cho icon trong giữa 62 */
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+    /* điều chinh vị trí cho icon ở giữa tính từ trên xuống*/
+}
+
+#header .search-btn:hover{
+    background-color: rgb(227, 73, 26);
+    cursor: pointer;
+    /* khi để chuột vào chuột chuyển sang hình bàn tay */
+}
+
+#nav li:hover .subnav{
+    display: block;
+    /* khi để chuột vào sẻ hiện ra thẻ subnav */
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a{
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav > li > a{
+    /* #nav > li > a là chỉ lấy con trực tiếp của nav  */
+    color: #fff;
+    text-transform: uppercase;
+    /* text-transform: uppercase; in hoa toàn bộ các chữ */
+}
+#nav li a {
+    
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 25px;
+    display: block;
+}
+
+#nav li a:hover{
+    color:#333 ;
+    background-color: #ccc;
+    /* display: inline-block; */
+    /*  display: inline-block; canh đường viền = với header */
+}
+#slider{
+    margin-top: 50px;
+    /* cho phần slider hiện bên dưới phần header */
+    padding-top: 50%;
+    background: url(https://www.w3schools.com/w3images/chicago.jpg) top center / cover no-repeat;
+    position: relative;
+}
+#slider .text-content{
+    position: absolute;
+    color: #fff;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading{
+    font-weight: 500;
+    /* chỉnh độ dày của chữ */
+    font-size: 24px;
+}
+
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#content{
+
+}
+
+#content .team{
+    margin-bottom: 285px;
+}
+
+#content .content-section{
+    width: 800px;
+    /* thu nhỏ phạm vi nội dung */
+    margin-left: auto;
+    margin-right: auto;
+    /* đưa nội dung ra giữa */
+    padding-top: 64px ;
+}
+
+#content .content-section .section-heading{
+    font-size: 30px;
+    font-weight: 400;
+    /* độ mỏng của chữ */
+    letter-spacing: 4px;
+    /* khoản giữa các chữ cái */
+}
+
+#content .content-section .about-text{
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: justify;
+    /* canh cho chữ xuống hàng đều 2 bên */
+    line-height: 1.5;
+    /* khoản cách giữa các dòng chữ */
+}
+
+#content .content-section .section-subheading{
+    font-size: 15px;
+    margin-top: 25px o 15px 0;
+    font-style: italic;
+    /* làm chữ nghiên */
+    opacity: 0.5;
+    /* làm chữ mờ */
+}
+
+#content .content-section .section-heading,
+#content .content-section .section-subheading{
+    text-align: center;
+}
+/* h */
+.content-contact{
+    display: flex;
+    margin: 32px 0 32px 7px;
+    position: relative;
+    height: 136px;
+}
+
+.content-contact .label-contact{
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.content-contact .label-contact{
+    width: 384px;
+}
+
+.content-contact .input-email,
+.content-contact .input-name{
+    width: 184px;
+    height: 40px;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.content-contact .input-name{
+    margin-right: 16px;
+}
+
+.content-contact .input-message{
+    width: 388px;
+    height: 40px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.contact-button .footer-contact{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 20px;
+    border: none;
+    background-color: #000;
+    width: 72px;
+    height: 38px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-button .footer-contact:hover{
+    background-color: #ccc;
+    color: #000;
+}
+/* h */
+#content .member{
+    float: left;
+    /* cho nội hiện trên cùng 1 hàng */
+    margin: 62px 0 103px 0 ;
+    width: 33.33333%;
+    text-align: center;
+
+}
+
+#content .member .name-member{
+    font-size: 15px;
+}
+
+#content .member .member-avata{
+    width: 154px;
+    height: 154px;
+    margin-top: 15px; 
+    border-radius: 4px;
+    /* bo tròn góc ảnh */
+}
+
+.tour-section{
+    background-color: #000;
+    height: auto;
+}
+
+.tour-section .section-heading,
+.tour-section .section-subheading{
+    color: #fff;
+}
+
+
+.tickest-list{
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+.tickest-list li{
+    list-style-type: none;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    color: #757575;
+}
+
+.tickest-list .sold-out{
+    margin-left: 14px;
+    background-color: red;
+    color: #fff;
+    padding: 3px 5px;
+}
+
+.tickest-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -3px;
+    /* cho vật di chuyển lên 3px sử dụng được khi có float */
+}
+
+.places-list{
+    margin-top: 32px;
+    padding-bottom: 470px;
+    width: 800px;
+    height: 445px;
+    height: 395px;
+    /* margin: 0 360px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.place-item{
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+    /* khoản của 2 hình ảnh */
+  
+}
+
+.places-img{
+    width: 100%;
+    /* cho ảnh có chiều bằng dài với thẻ cha */
+    height: 184px;
+}
+
+.place-content{
+    padding: 16px;
+    background-color: #fff;
+    width: 100%;
+    /* cho backgrou cho chiều dài bằng thẻ cha */
+}
+
+.place-content .places-heading{
+}
+
+.place-content .places-time{
+    margin: 15px 0;
+    opacity: 0.5;
+    /* làm cho chữ mờ */
+}
+
+.place-content .places-describe{
+    margin-bottom: 25px ;
+}
+
+.place-content .places-buy-tickest{
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.place-content .places-buy-tickest:hover{
+    background-color: #ccc;
+    color: #000;
+    border: 2px solid #ccc;
+}
+
+.place-content .places-img:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.places-img:hover{
+    filter: brightness(65%);
+    /* làm ảnh tối đi */
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    /* canh giữa theo chiều cao  */
+    justify-content: center;
+    /* canh giữa theo chiều ngang  */
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 900px ;
+    max-width: calc(100% - 50px);
+    /* khi ảnh thu nhỏ lại thì nó sẻ cách hai bên viền , mõi bên 25px */
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;   /* ease là cách di chuyển , 0.5s tốc độ di chuyển */
+    /* dùng để chạy hiệu ứng di chuyển đẫ được css ở dưới */
+  
+}
+
+.modal-container .modal-header{
+    background-color: #009688;
+    height: 129px;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    /* khoản cách giữa các chữ trong câu */
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 9px 12px;
+    background-color: #009688;
+    border: 2px solid #009688;
+}
+
+.modal-close:hover{
+    background-color: #ccc;
+    border: 2px solid #ccc;
+    color: #000;
+    cursor: pointer;
+    /* khi để con trỏ chuột vào sẻ chuyển sang hình bàn tay */
+}
+
+.modal-body{
+    padding: 0 16px;
+    
+}
+
+.modal-label{
+    display: block;
+    /* cho phần label vào input mỗi thẻ 1 hàng */
+    padding: 12px 0;
+    font-size: 15px;
+}
+
+.modal-input{
+    width: 100%;
+    padding: 10px 8px;
+    border: 2px solid #ccc;
+    margin-bottom: 17px;
+}
+
+#buy-tiskecs{
+    border: none;
+    width: 100%;
+    padding: 16px 0;
+    background-color: #009688;
+    color: #fff;
+    text-transform: uppercase;
+    /* chỉnh font chữ in hoa */
+    font-weight: bold;
+    /* chỉnh font in đậm */
+    margin-bottom: 31px;
+}
+
+#buy-tiskecs:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-footer{
+    padding: 0 16px 30px 16px;
+    text-align: right;
+    
+}
+
+.modal-footer a{
+    color: #2196F3;
+}
+
+.open{
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        /* lúc đầu nội dung trong suôt */
+        transform: translateY(-100px);
+        /* điểm bắt đầu từ vị trí -100px tỉnh từ trên xuống */
+    }
+    to {
+        opacity: 1;
+        /* lúc sau nội dung hiện rõ như ban đầu */
+        transform: translateY(0);
+        /* điểm kết thúc tại vị trí ban đầu  */
+    }
+}
+#footer{
+    margin:64px 0 79px 0
+}
+#footer .imag-footer{
+    width: 100%;
+    height: 715px;
+    margin-bottom: 64px;
+}
+
+#footer .icon-footer{
+    text-align: center;
+    font-size: 22px;
+    color: rgba(0, 0, 0 , 0.4);
+    margin-bottom: 15px;
+}
+
+.footer-hover:hover{
+    color: #ccc;
+}
+
+#footer .link-footer{
+    color: rgba(0, 0, 0 , 0.4);
+    text-align: center;
+}
+
+#footer .link-footer a{
+    color: rgba(0, 0, 0 , 0.4);
+}
