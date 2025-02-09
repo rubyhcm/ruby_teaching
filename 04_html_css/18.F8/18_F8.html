@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./icon_themify/themify-icons-font/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div id="container"></div>
+        <!-- <div id="toast">
+        <div class="toast toast--Success">
+            <div class="toast__icon">
+                <i class="ti-check-box"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title" style="margin: 0;">Success</h3>
+                <p class="toast__msg" style="margin: 0;">Congratulations  on your success</p>
+            </div>
+            <div class="toast__close">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+    </div> -->
+    <div id="btn">
+        <div onclick="showSuccesstoast();" class="btn btn--success">Show success toast</div>
+        <div onclick="showErrortoast();" class="btn btn--error">Show error toast</div>
+    </div>
+    <script>
+        function toast({title = '', 
+                        massage = '', 
+                        type = 'Info', 
+                        duration = 3000,}) {
+                            const main = document.getElementById('container');
+                            if(main) {
+                                const container = document.createElement('div');
+
+                                const autoRemoveId = setTimeout(function() {
+                                    main.removeChild(container);
+                                }, duration + 600);
+
+                                container.onclick = function (e) {
+                                    if (e.target.closest('.toast__close')) {
+                                        main.removeChild(container);
+                                        clearTimeout(autoRemoveId);
+                                    }
+                                }
+
+                                const icons = {
+                                    Success: 'ti-check-box',
+                                    Info: 'ti-info',
+                                    Warning: 'ti-lock',
+                                    Error: 'ti-lock',
+                                }
+                                const icon = icons[type];
+                                const delay = (duration / 1000).toFixed(2);
+                                // tofixed(2) nếu chia ra số thập phân thì chỉe lấy 2 số
+                                container.classList.add('toast', `toast--${type}`);
+                                container.style.animation = `slideInleft 0.5s ease, slideInright 0.6s ${delay}s ease forwards`
+                                container.innerHTML = `
+                                <div class="toast__icon">
+                                    <i class="${icon}"></i>
+                                </div>
+                                <div class="toast__body">
+                                    <h3 class="toast__title" style="margin: 0;">${title}</h3>
+                                    <p class="toast__msg" style="margin: 0;">${massage}</p>
+                                </div>
+                                <div class="toast__close">
+                                    <i class="ti-close"></i>
+                                </div>`;
+                                main.appendChild(container);
+                                
+                            }
+                        }
+        function showSuccesstoast () {
+            toast({
+            title: 'Thành Công',
+            massage: 'Chúc mừng đã đăng nhập thành công',
+            type: 'Success',
+            duration: 3000,
+        })
+        }
+        function showErrortoast () {
+            toast({
+            title: 'Thất Bại',
+            massage: 'Có lỗi trong quá trình đăng nhập, vui lòng kiểm tra lại',
+            type: 'Error',
+            duration: 4000,
+        })
+        }
+    </script>
+    <!-- Success -->
+    <!-- <div class="container">
+        <div class="toast toast--Success">
+            <div class="toast__icon">
+                <i class="ti-check-box"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title" style="margin: 0;">Success</h3>
+                <p class="toast__msg" style="margin: 0;">Congratulations on your success</p>
+            </div>
+            <div class="toast__close">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Info -->
+    <!-- <div class="container">
+        <div class="toast toast--Info">
+            <div class="toast__icon">
+                <i class="ti-info"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title" style="margin: 0;">Ifno</h3>
+                <p class="toast__msg" style="margin: 0;">Congratulations on your success</p>
+            </div>
+            <div class="toast__close">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Warning -->
+    <!-- <div class="container">
+        <div class="toast toast--Warning">
+            <div class="toast__icon">
+                <i class="ti-lock"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title" style="margin: 0;">Warning</h3>
+                <p class="toast__msg" style="margin: 0;">Congratulations on your success</p>
+            </div>
+            <div class="toast__close">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Error -->
+    <!-- <div class="container">
+        <div class="toast toast ">
+            <div class="toast__icon">
+                <i class="ti-check-box"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title" style="margin: 0;">Error</h3>
+                <p class="toast__msg" style="margin: 0;">Congratulations on your success</p>
+            </div>
+            <div class="toast__close">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>
