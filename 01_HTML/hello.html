@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="toado"></div>
+<script>
+
+    function errorgeo(err) {
+        var errcode = err.code;
+        var message = err.message;
+        var boxhtml = document.getElementById("toado");
+        boxhtml.innerHTML = "Mã lỗi: " + errcode + "<br>" + "Nội dung lỗi: " + message;
+
+    }
+
+    function showcoor(pos) {
+        var coord = pos.coords;
+        var long = coord.longitude;
+        var lat  = coord.latitude;
+        var boxhtml = document.getElementById("toado");
+        var urlmap = "https://maps.googleapis.com/maps/api/staticmap?center="+lat+","+long+"&zoom=12&size=400x400&markers=color:red%7Clabel:C%7C"+lat+","+long;
+        // boxhtml.innerHTML =urlmap + '<img src="'+urlmap+'"/>';
+        boxhtml.innerHTML ='Đây là vị trí  <img src="'+urlmap+'"/>';
+
+    }
+
+    //TEST
+    navigator.geolocation.getCurrentPosition(showcoor, errorgeo);
+
+</script>
+</body>
+</html>
